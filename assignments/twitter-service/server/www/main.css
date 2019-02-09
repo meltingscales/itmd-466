@@ -1,0 +1,11 @@
+.tweets-container ul > :nth-of-type(2n+0)  {
+    background-color: darkgrey;
+}
+
+.tweets-container ul > :nth-of-type(2n+1) {
+    background-color: aquamarine;
+}
+
+.tweets-container img {
+    max-width: 30%;
+}
