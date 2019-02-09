@@ -3,7 +3,7 @@ import json
 from pprint import pprint
 
 import requests
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, redirect
 from flask.json import jsonify
 
 app = Flask(__name__, static_folder="www")
@@ -23,6 +23,10 @@ consumer_secret = json_secrets['consumer_secret']
 
 
 @app.route('/')
+def redirindex():
+    return redirect('/henrypost.html')
+
+@app.route('/henrypost.html')
 def index():
     return app.send_static_file("twitter.html")
 
