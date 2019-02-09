@@ -1,2 +1,2 @@
 REM Using imagemagick.
-convert *.png images.pdf
+convert *.png images.out.pdf
