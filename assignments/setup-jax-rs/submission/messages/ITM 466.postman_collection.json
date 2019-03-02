@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "5f222b35-8853-470a-8de8-7c1fa64e8594",
+		"name": "ITM 466",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add message from 'david'",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"David\",\n\t\"message\": \"Bye!\",\n\t\"created\": \"2008-09-15T15:53:00+05:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/henry/webapi/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"henry",
+						"webapi",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add message from 'henry'",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"author\": \"Henry\",\n\t\"message\": \"Hi again!!!\",\n\t\"created\": \"2011-11-15T15:53:00+05:00\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/henry/webapi/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"henry",
+						"webapi",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get message 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/henry/webapi/message/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"henry",
+						"webapi",
+						"message",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/henry/webapi/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"henry",
+						"webapi",
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete message 3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/henry/webapi/message/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"henry",
+						"webapi",
+						"message",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
