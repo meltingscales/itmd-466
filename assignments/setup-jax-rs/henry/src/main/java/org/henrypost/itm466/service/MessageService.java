@@ -11,8 +11,10 @@ public class MessageService {
     private Map<Long, Message> messages = DatabaseClass.getMessages();
 
     public MessageService() {
-        addMessage(new Message(-1L, "Hello there!", "Henry"));
-        addMessage(new Message(-1L, "Hello JAVA!", "da jay vee em"));
+        if (getAllMessages().size() <= 0) {
+            addMessage(new Message(-1L, "Hello there!", "Henry"));
+            addMessage(new Message(-1L, "Hello JAVA!", "da jay vee em"));
+        }
     }
 
     /***
