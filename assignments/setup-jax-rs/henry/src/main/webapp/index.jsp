@@ -6,9 +6,6 @@
         <li><a href="${pageContext.request.contextPath}/webapi/myresource">Test resource</a></li>
         <li>
             <h2><a href="${pageContext.request.contextPath}/webapi/message">message</a></h2>
-            <ul>
-                <li></li>
-            </ul>
         </li>
     </ul>
 </nav>

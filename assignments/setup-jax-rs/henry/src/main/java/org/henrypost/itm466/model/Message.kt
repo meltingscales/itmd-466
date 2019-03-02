@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement
 @XmlRootElement
 class Message {
 
-    var id: Long = 0
+    var id: Long? = null
     var message: String? = null
     var author: String? = null
     var created: Date? = null
@@ -15,17 +15,14 @@ class Message {
 
     }
 
+
     constructor(_id: Long, _message: String, _author: String) {
-        id = _id
-        message = _message
-        author = _author
+        this.id = _id
+        this.message = _message
+        this.author = _author
         created = Date()
     }
 
-    constructor(_id: Long, _message: String, _author: String, _created: Date) {
-        id = _id
-        message = _message
-        author = _author
-        created = _created
-    }
+
+
 }
