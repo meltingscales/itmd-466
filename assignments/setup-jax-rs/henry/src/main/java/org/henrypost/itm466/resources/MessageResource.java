@@ -3,10 +3,7 @@ package org.henrypost.itm466.resources;
 import org.henrypost.itm466.model.Message;
 import org.henrypost.itm466.service.MessageService;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -16,16 +13,29 @@ public class MessageResource {
     MessageService messageService = new MessageService();
 
     @GET
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces(MediaType.APPLICATION_JSON)
     public List<Message> getAllMessages() {
         return messageService.getAllMessages();
     }
 
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Message addMessage(Message message) {
+        return messageService.addMessage(message);
+    }
+
     @GET
     @Path("/{messageId}")
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces(MediaType.APPLICATION_JSON)
     public Message getMessage(@PathParam("messageId") long messageId) {
         return messageService.getMessage(messageId);
     }
 
+    @DELETE
+    @Path("/{messageId}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Message deleteMessage(@PathParam("messageId") long messageId) {
+        return messageService.removeMessage(messageId);
+    }
 }

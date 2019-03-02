@@ -1,4 +1,3 @@
-<%--@elvariable id="MessageService" type="org.henrypost.itm466.resources.MessageResource"--%>
 <html>
 <body>
 <nav>
