@@ -144,5 +144,10 @@
             <artifactId>jersey-media-json-jackson</artifactId>
             <version>${jersey.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.valid4j</groupId>
+            <artifactId>http-matchers</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 </project>
