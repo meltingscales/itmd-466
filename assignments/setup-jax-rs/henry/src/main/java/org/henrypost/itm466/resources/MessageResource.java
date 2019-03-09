@@ -10,7 +10,7 @@ import java.util.List;
 @Path("/message")
 public class MessageResource {
 
-    MessageService messageService = new MessageService();
+    private MessageService messageService = new MessageService();
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

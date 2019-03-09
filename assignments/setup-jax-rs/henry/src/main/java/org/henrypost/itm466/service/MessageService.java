@@ -12,8 +12,8 @@ public class MessageService {
 
     public MessageService() {
         if (getAllMessages().size() <= 0) {
-            addMessage(new Message(-1L, "Hello there!", "Henry"));
-            addMessage(new Message(-1L, "Hello JAVA!", "da jay vee em"));
+            addMessage(new Message(-1L, "Hello there!", "HenryFBP"));
+            addMessage(new Message(-1L, "I am the Java Master!", "JavaMaster"));
         }
     }
 

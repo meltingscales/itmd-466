@@ -23,6 +23,4 @@ class Message {
         created = Date()
     }
 
-
-
 }

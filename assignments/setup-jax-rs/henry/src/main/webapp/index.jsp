@@ -4,7 +4,10 @@
     <ul>
         <li><a href="${pageContext.request.contextPath}/webapi/myresource">Test resource</a></li>
         <li>
-            <h2><a href="${pageContext.request.contextPath}/webapi/message">message</a></h2>
+            <a href="${pageContext.request.contextPath}/webapi/message">message</a>
+        </li>
+        <li>
+            <a href="${pageContext.request.contextPath}/webapi/profile">profile</a>
         </li>
     </ul>
 </nav>

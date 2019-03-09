@@ -1,16 +1,26 @@
 package org.henrypost.itm466.model
 
 import java.util.*
+import javax.xml.bind.annotation.XmlRootElement
 
-class Profile(_id: Long, _profileName: String, _firstName: String, _lastName: String) {
+@XmlRootElement
+class Profile {
 
-    private var id: Long = _id
-    private var profileName: String? = _profileName
-    private var firstName: String? = _firstName
-    private var lastName: String? = _lastName
-    private var created: Date? = null
+    var id: Long? = null
+    var profileName: String? = null
+    var firstName: String? = null
+    var lastName: String? = null
+    var created: Date? = null
 
-    init {
+    constructor() {
+
+    }
+
+    constructor(_id: Long, _profileName: String, _firstName: String, _lastName: String) {
+        id = _id
+        profileName = _profileName
+        firstName = _firstName
+        lastName = _lastName
         created = Date()
     }
 
