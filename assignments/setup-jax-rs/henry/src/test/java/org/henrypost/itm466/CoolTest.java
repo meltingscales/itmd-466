@@ -1,32 +1,40 @@
 package org.henrypost.itm466;
 
-import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.test.JerseyTest;
-import org.henrypost.itm466.model.Message;
+import junit.framework.TestCase;
 import org.junit.Test;
 
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Application;
-import java.util.List;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.Response;
 
-public class CoolTest extends JerseyTest {
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.Assert.assertThat;
+import static org.valid4j.matchers.http.HttpResponseMatchers.hasEntity;
+import static org.valid4j.matchers.http.HttpResponseMatchers.hasStatus;
 
-    @Test
-    public void testGetMessages() {
+// Statically import the library entry point:
 
-        WebTarget target = target("/message");
+public class CoolTest extends TestCase {
 
-        System.out.println(target.getUri());
 
-        final List<Message> hello = target.request().get(List.class);
-
-        assert (hello.get(0).getMessage().equals("1st :)"));
-
-    }
+    static String baseURL = "http://localhost:8080/henry/webapi";
 
     @Override
-    protected Application configure() {
+    protected void setUp() {
 
-        return new ResourceConfig(CoolTest.class);
     }
+
+    @Test
+    public void testSimple() {
+
+        // Invoke your web service using plain JAX-RS. E.g:
+        Client client = ClientBuilder.newClient();
+        Response response = client.target(String.format("%s/myresource", baseURL)).request("text/plain").get();
+
+        // Verify the response
+        assertThat(response, hasStatus(Response.Status.OK));
+        assertThat(response, hasEntity(equalTo("Got it!")));
+
+    }
+
 }
