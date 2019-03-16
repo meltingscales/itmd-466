@@ -5,7 +5,10 @@ import org.henrypost.itm466.model.Message;
 import org.henrypost.itm466.service.MessageService;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.UriInfo;
+import java.net.URI;
 import java.util.ArrayList;
 
 @Path("/message")
@@ -37,15 +40,41 @@ public class MessageResource {
 
     @PUT
     @Path("/{messageId}")
-    public Message updateMessage(@PathParam("messageId") long id, Message message) {
+    public Message updateMessage(
+            @PathParam("messageId") long id,
+            Message message) {
         message.setId(id);
+
         return messageService.updateMessage(message);
     }
 
     @GET
     @Path("/{messageId}")
-    public Message getMessage(@PathParam("messageId") long messageId) {
-        return messageService.getMessage(messageId);
+    public Message getMessage(
+            @PathParam("messageId") long messageId,
+            @Context UriInfo uriInfo) {
+        Message message = messageService.getMessage(messageId);
+        message.addLink(getUriForSelf(uriInfo, message), "self");
+        message.addLink(getUriForProfile(uriInfo, message), "profile");
+
+        return message;
+    }
+
+    private String getUriForProfile(UriInfo uriInfo, Message message) {
+        URI uri = uriInfo.getBaseUriBuilder()
+                .path(ProfileResource.class)
+                .path(message.getAuthor())
+                .build();
+
+        return uri.toString();
+    }
+
+    private String getUriForSelf(@Context UriInfo uriInfo, Message message) {
+        return uriInfo.getBaseUriBuilder()
+                    .path(MessageResource.class)
+                    .path(Long.toString(message.getId()))
+                    .build()
+                    .toString();
     }
 
     @DELETE
