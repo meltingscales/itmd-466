@@ -28,12 +28,13 @@ public class MessageFilterBean {
         this.size = size;
     }
 
-    @QueryParam("year")
-    private int year;
 
-    @QueryParam("start")
-    private int start;
+    private @QueryParam("year")
+    int year;
 
-    @QueryParam("size")
-    private int size;
+    private @QueryParam("start")
+    int start;
+
+    private @QueryParam("size")
+    int size;
 }

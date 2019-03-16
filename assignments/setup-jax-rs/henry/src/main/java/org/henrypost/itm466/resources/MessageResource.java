@@ -16,13 +16,13 @@ public class MessageResource {
     private MessageService messageService = new MessageService();
 
     @GET
-    public ArrayList<Message> getAllMessages(@BeanParam MessageFilterBean filterBean) {
+    public ArrayList<Message> getMessages(@BeanParam MessageFilterBean filterBean) {
 
         if (filterBean.getYear() > 0) {
             return messageService.getAllMessagesForYear(filterBean.getYear());
         }
 
-        if ((filterBean.getStart() > 0) && (filterBean.getYear() > 0)) {
+        if ((filterBean.getStart() > 0) && (filterBean.getSize() > 0)) {
             return messageService.getAllMessagePaginated(filterBean.getStart(), filterBean.getSize());
         }
 
@@ -52,5 +52,11 @@ public class MessageResource {
     @Path("/{messageId}")
     public Message deleteMessage(@PathParam("messageId") long messageId) {
         return messageService.removeMessage(messageId);
+    }
+
+    @GET
+    @Path("/{messageId}/comments/")
+    public CommentResource getCommentResource() {
+        return new CommentResource();
     }
 }
