@@ -48,14 +48,14 @@ public class MessageService {
         return messagesForYear;
     }
 
-    public List<Message> getAllMessagePaginated(int start, int size) {
+    public ArrayList<Message> getAllMessagePaginated(int start, int size) {
         ArrayList<Message> list = new ArrayList<>(messages.values());
 
         if (start + size > list.size()) {
             return new ArrayList<>();
         }
 
-        return list.subList(start, start + size);
+        return new ArrayList<>(list.subList(start, start + size));
     }
 
 

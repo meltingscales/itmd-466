@@ -1,5 +1,6 @@
 package org.henrypost.itm466.resources;
 
+import org.henrypost.itm466.beans.MessageFilterBean;
 import org.henrypost.itm466.model.Message;
 import org.henrypost.itm466.service.MessageService;
 
@@ -15,10 +16,14 @@ public class MessageResource {
     private MessageService messageService = new MessageService();
 
     @GET
-    public ArrayList<Message> getAllMessages(@QueryParam("year") int year) {
+    public ArrayList<Message> getAllMessages(@BeanParam MessageFilterBean filterBean) {
 
-        if (year > 0) {
-            return messageService.getAllMessagesForYear(year);
+        if (filterBean.getYear() > 0) {
+            return messageService.getAllMessagesForYear(filterBean.getYear());
+        }
+
+        if ((filterBean.getStart() > 0) && (filterBean.getYear() > 0)) {
+            return messageService.getAllMessagePaginated(filterBean.getStart(), filterBean.getSize());
         }
 
         return new ArrayList<>(messageService.getAllMessages());
