@@ -55,7 +55,7 @@ public class MessageResource {
     }
 
     @GET
-    @Path("/{messageId}/comments/")
+    @Path("/{messageId}/comments")
     public CommentResource getCommentResource() {
         return new CommentResource();
     }
