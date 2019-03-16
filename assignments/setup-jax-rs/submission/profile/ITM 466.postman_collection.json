@@ -1,0 +1,469 @@
+{
+	"info": {
+		"_postman_id": "5f222b35-8853-470a-8de8-7c1fa64e8594",
+		"name": "ITM 466",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Add message from 'David123'",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": \"David123\",\n\t\"message\": \"Bye!\",\n\t\"created\": \"2008-09-15T15:53:00+05:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add message from 'HenryFBP'",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\": \"HenryFBP\",\n\t\"message\": \"Hi again!!!\",\n\t\"created\": \"2011-11-15T15:53:00+05:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get message 3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/message/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"message",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete message 3",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/message/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"message",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Add 'David123' profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"profileName\": \"David123\",\n\t\"firstName\": \"David\",\n\t\"lastName\": \"Smith\",\n\t\"created\": \"2008-09-15T15:53:00+05:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add 'HenryFBP' profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"profileName\": \"HenryFBP\",\n\t\"firstName\": \"Henry\",\n\t\"lastName\": \"Post\",\n\t\"created\": \"2008-09-15T15:53:00+05:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add 'JillHill7' profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"profileName\": \"JillHill7\",\n\t\"firstName\": \"Jill\",\n\t\"lastName\": \"Stein\",\n\t\"created\": \"3019-09-15T15:53:00+05:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update 'David123' profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 3,\n    \"profileName\": \"David123\",\n\t\"firstName\": \"Davidia\",\n\t\"lastName\": \"Smithonius\",\n\t\"created\": \"2020-09-15T15:53:00+05:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/profile/David123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"profile",
+								"David123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update 'HenryFBP' profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"profileName\": \"HenryFBP\",\n\t\"firstName\": \"Henrietta\",\n\t\"lastName\": \"Postonium\",\n\t\"created\": \"12392-03-15T15:54:00+05:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/profile/David123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"profile",
+								"David123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update 'JillHill7' profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"profileName\": \"HenryFBP\",\n\t\"firstName\": \"Henrietta\",\n\t\"lastName\": \"Postonium\",\n\t\"created\": \"12392-03-15T15:54:00+05:00\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/profile/David123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"profile",
+								"David123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete 'David123' profile",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/profile/David123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"profile",
+								"David123"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete 'HenryFBP' profile",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/profile/HenryFBP",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"profile",
+								"HenryFBP"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete 'JillHill7' profile",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/henry/webapi/profile/JillHill7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"henry",
+								"webapi",
+								"profile",
+								"JillHill7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
