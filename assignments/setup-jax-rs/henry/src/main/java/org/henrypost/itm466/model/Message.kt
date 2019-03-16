@@ -23,4 +23,11 @@ class Message {
         created = Date()
     }
 
+    constructor(_id: Long, _message: String, _author: String, _created: Date) {
+        this.id = _id
+        this.message = _message
+        this.author = _author
+        created = _created
+    }
+
 }
