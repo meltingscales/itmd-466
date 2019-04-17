@@ -1,5 +1,3 @@
-npm install http-server -g
-
-http-server
+http-server -v
 
 PAUSE
