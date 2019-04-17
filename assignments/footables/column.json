@@ -1,0 +1,7 @@
+[
+  {"name":"id","title":"ID","breakpoints":"xs sm","type":"number","style":{"width":80,"maxWidth":80}},
+  {"name":"author","title":"Author"},
+  {"name":"message","title":"Message"},  
+  {"name":"created","title":"Created","type":"date","breakpoints":"xs sm md","formatString":"MMM YYYY"},
+  {"name":"links","title":"Links"}
+]
